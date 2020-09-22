@@ -1,0 +1,55 @@
+<div style="padding:50px"></div>
+<div class="animate__animated animate__slideInUp" style="background-color:rgb(235, 235, 235); height: 100%; border-top-left-radius:20px ;border-top-right-radius:20px;" >
+    <div style="padding:20px"></div>
+<div align="center" style="font-size: 46px; font-family: Arial, Helvetica, sans-serif; color: rgb(124, 124, 124); font-weight: bolder;">Dashboard</div>
+<div style="padding: 20px;"></div>
+<div class="row">
+    <div class="col" style="background-color: rgb(255, 255, 255); height: 100px;">
+
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Active</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <div class="form-group" style="padding: 20px;">
+            <!-- <label for="exampleInputEmail1">Email address</label> -->
+            <input #box2 (blur)="name(box2.value)" placeholder="text" style="border:1px solid transparent; width:300px; background-color: rgba(0, 0, 0, 0.185);" type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+          </div>
+    </div>
+    <div class="col">
+        <div style="color:#444; font-weight: bolder;">Names Added</div>
+        <div style=" padding-right:10px;">
+            <div *ngFor="let m of all">{{m.name}} <span style="float: right;">  <a (click)="display(m.pk)"><i class="fas fa-user-edit"></i></a> | <a (click)="delete(m.pk)"><i style="color:red" class="fas fa-trash-alt"></i></a></span></div>
+        </div>
+        
+        
+    </div>
+    <div *ngIf="paycard=='true'" class="yope" style="width:100%; height:100%; padding:300px">
+        <div *ngIf="paycard=='true'" class="momo animation-target"> 
+          <div align="center" style="font-weight: bolder; padding:5px; color:#666">EDIT NAME</div>
+          <div align="center">
+            <div class="input-group input-group-sm mb-3 d-flex fade-in4" style="width:100%; margin:center;">
+          
+             
+              <input type="text" placeholder="Amount paying" name="discount" #box11 (blur)="discountey(box11.value)"  class="form-control" style=" margin:center; border:1px solid transparent;" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" >
+            </div>
+        
+          </div>
+          <div align="center">
+            <button type="button"  style="width:40%" class="btn btn-primary btn-sm " (click)="cancel()">Cancel</button>
+            <button type="button" style="width:40%" class="btn btn-secondary btn-sm " (click)="edit()">Submit</button>
+          
+          </div>
+        </div>
+      </div>
+
+</div>
+
+
+
+</div>

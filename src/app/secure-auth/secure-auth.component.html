@@ -1,0 +1,74 @@
+<div style=""></div>
+
+<div  style="box-shadow: 10px 10px 10px black;">
+    <div  class="wambo" style="background-color: #F7F7F7; border-radius: 10px;  font-family: Arial, Helvetica, sans-serif; box-shadow: 5px 4px 20px 5px #00000021">
+        <div *ngIf="account=='login'" class="animation-target">
+            <div style="padding: 20px;"></div>
+        <div style="color:#707070; font-size: 52px; text-align: center;">Sign In</div>
+        <div style="padding:40px"></div>
+        <div class="form-group" style="padding: 20px;">
+            <!-- <label for="exampleInputEmail1">Email address</label> -->
+            <input #box1 (blur)="username(box1.value)"  placeholder="Username" style="border:1px solid transparent" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+          </div>
+        <div class="form-group" style="padding: 20px;">
+            <!-- <label for="exampleInputEmail1">Email address</label> -->
+            <input #box2 (blur)="password(box2.value)" placeholder="Password" style="border:1px solid transparent" type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+          </div>
+          <div align="center">
+            <button (click)="login()" style="border-radius: 20px; width:200px;" type="button" class="btn btn-primary">Primary</button>
+          </div>
+          <div style="padding: 10px;"></div>
+          <div align="center"><a style="cursor: pointer;" (click)="create()"><i>i dont have an account</i></a> </div>
+        <div style="padding:10px; color:rgb(156, 95, 95); font-family:Arial, Helvetica, sans-serif" align="right" >
+            Forgot Account?
+
+           
+    
+        </div>
+        </div>
+
+
+        <div *ngIf="account=='create'" class="animation-target">
+            <div style="padding: 20px;"></div>
+        <div style="color:#707070; font-size: 52px; text-align: center;">Sign Up</div>
+        <div style="padding:40px"></div>
+        <div class="form-group" style="padding: 20px;">
+            <!-- <label for="exampleInputEmail1">Email address</label> -->
+            <input #box3 (blur)="username(box3.value)" placeholder="Username" style="border:1px solid transparent" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+          </div>
+        <div class="form-group" style="padding: 20px;">
+            <!-- <label for="exampleInputEmail1">Email address</label> -->
+            <input #box4 (blur)="email(box4.value)" placeholder="Email" style="border:1px solid transparent" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+          </div>
+        <div class="form-group" style="padding: 20px;">
+            <!-- <label for="exampleInputEmail1">Email address</label> -->
+            <input #box5 (blur)="password(box5.value)" placeholder="Password" style="border:1px solid transparent" type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+          </div>
+        <div class="form-group" style="padding: 20px;">
+            <!-- <label for="exampleInputEmail1">Email address</label> -->
+            <input #box6 (blur)="password2(box6.value)" placeholder="Confirm Password" style="border:1px solid transparent" type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+          </div>
+          <div align="center">
+            <button style="border-radius: 20px; width:200px;" type="button" class="btn btn-primary" (click)="submit()">Primary</button>
+          </div>
+          <div style="padding: 10px;"></div>
+          <div align="center"><a style="cursor: pointer;" (click)="back()"> <i>Back to login</i></a></div>
+        <div style="padding:10px; color:rgb(156, 95, 95); font-family:Arial, Helvetica, sans-serif" align="right" >
+            Forgot Account?
+
+           
+    
+        </div>
+        </div>
+        
+
+
+    </div>
+   
+</div>
